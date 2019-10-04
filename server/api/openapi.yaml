@@ -1,0 +1,64 @@
+openapi: 3.0.2
+info:
+  title: photo viewer
+  version: 1.0.0
+servers:
+- description: development
+  url: http://localhost:8080
+paths:
+  /photos:
+    get:
+      description: Photoをすべて取得
+      operationId: getPhotos
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Photos'
+          description: Photoの配列
+components:
+  responses:
+    Photos:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Photos'
+      description: Photoの配列
+  schemas:
+    Photos:
+      example:
+        photos:
+        - path: /photos/20190907-001-DSC_0221.jpg
+          id: 1
+          title: sundown
+        - path: /photos/20190907-001-DSC_0221.jpg
+          id: 1
+          title: sundown
+      properties:
+        photos:
+          items:
+            $ref: '#/components/schemas/PhotoProperties'
+          type: array
+      required:
+      - photos
+      type: object
+    PhotoProperties:
+      example:
+        path: /photos/20190907-001-DSC_0221.jpg
+        id: 1
+        title: sundown
+      properties:
+        id:
+          example: 1
+          type: integer
+        title:
+          example: sundown
+          type: string
+        path:
+          example: /photos/20190907-001-DSC_0221.jpg
+          type: string
+      required:
+      - filename
+      - id
+      type: object
