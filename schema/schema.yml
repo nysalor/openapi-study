@@ -33,9 +33,9 @@ components:
         title:
           type: string
           example: sundown
-        path:
+        url:
           type: string
-          example: /photos/20190907-001-DSC_0221.jpg
+          example: http://localhost:8090/photos/20190907-001-DSC_0221.jpg
       required:
         - id
         - filename
