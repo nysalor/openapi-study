@@ -17,5 +17,9 @@ import (
 
 // GetPhotos - 
 func GetPhotos(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{})
+	var photos []PhotoProperties
+	res := Photos{
+		Photos: photos,
+	}
+	c.JSON(http.StatusOK, res)
 }
