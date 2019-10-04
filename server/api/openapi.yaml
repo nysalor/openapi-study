@@ -29,12 +29,12 @@ components:
     Photos:
       example:
         photos:
-        - path: /photos/20190907-001-DSC_0221.jpg
-          id: 1
+        - id: 1
           title: sundown
-        - path: /photos/20190907-001-DSC_0221.jpg
-          id: 1
+          url: http://localhost:8090/photos/20190907-001-DSC_0221.jpg
+        - id: 1
           title: sundown
+          url: http://localhost:8090/photos/20190907-001-DSC_0221.jpg
       properties:
         photos:
           items:
@@ -45,9 +45,9 @@ components:
       type: object
     PhotoProperties:
       example:
-        path: /photos/20190907-001-DSC_0221.jpg
         id: 1
         title: sundown
+        url: http://localhost:8090/photos/20190907-001-DSC_0221.jpg
       properties:
         id:
           example: 1
@@ -55,8 +55,8 @@ components:
         title:
           example: sundown
           type: string
-        path:
-          example: /photos/20190907-001-DSC_0221.jpg
+        url:
+          example: http://localhost:8090/photos/20190907-001-DSC_0221.jpg
           type: string
       required:
       - filename
