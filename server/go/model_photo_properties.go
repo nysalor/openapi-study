@@ -11,9 +11,9 @@ package openapi
 
 type PhotoProperties struct {
 
-	Id int32 `json:"id"`
+	Id int `json:"id"`
 
 	Title string `json:"title,omitempty"`
 
-	Path string `json:"path,omitempty"`
+	Url string `json:"url,omitempty"`
 }
